@@ -5,20 +5,36 @@
 
 function startPlay() {
 
-    let divSquare = creatingSquare();
     
-    const griglia = document.getElementById("griglia");
+    
+    const griglia = document.getElementById("griglia"); //Collego il mio div dall'html
     console.log(griglia);
 
-    function creatingSquare(){
+    function creatingSquare(){ //Creo la funzione per creare un div all'interno del mio div contenitore
 
-        const div = document.createElement("div");
-        div.classList.add("square");
+        const div = document.createElement("div"); //Creato il tag div
+        div.classList.add("square"); //Aggiunta la classe square al div appena creato
         return div;
+    }
+        console.log( creatingSquare() );
+    
 
+    for ( let i = 0; i < 100; i++ ) {
+
+        let elementCurrent = creatingSquare();
+        console.log(elementCurrent);
+
+        elementCurrent.addEventListener('click', function(){
+            console.log(this);
+            this.classList.toggle('active');
+            
+        })
+
+        griglia.append ( creatingSquare() );
+        
     }
 
-    console.log( divSquare );
+   
 
 }
 
