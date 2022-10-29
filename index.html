@@ -10,13 +10,24 @@
   <body>
     <header>
       <h1>Campo Minato</h1>
-      <button onclick="startPlay()">Play</button>
+      <div>
+        <span>Difficoltà:</span>
+        <select name="" id="Difficult">
+          <option value="101">Easy</option>
+          <option value="81">Medium</option>
+          <option value="49">Hard</option>
+        </select>
+        <button onclick="startPlay()">Play</button>
+      </div>
     </header>
     <main>
       <div id="griglia"></div>
     </main>
     <footer>
-      <div>Made by &hearts; by <a href="#">Boolean</a></div>
+      <div>
+        Made by &hearts; by
+        <a href="https://boolean.careers/" target="_blank">Boolean</a>
+      </div>
     </footer>
     <script src="./assets/js/main.js"></script>
   </body>

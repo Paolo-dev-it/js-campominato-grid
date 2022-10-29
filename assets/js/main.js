@@ -5,10 +5,12 @@
 
 function startPlay() {
 
-    
+    let chooseDifficult = document.getElementById("Difficult").value; //Collego sezione "select" dall'html per la selezione della difficoltà
     
     const griglia = document.getElementById("griglia"); //Collego il mio div dall'html
     console.log(griglia);
+
+    griglia.innerHTML ="";
 
     function creatingSquare(){ //Creo la funzione per creare un div all'interno del mio div contenitore
 
@@ -19,7 +21,7 @@ function startPlay() {
         console.log( creatingSquare() );
     
 
-    for ( let i = 0; i < 100; i++ ) { //Inizializzo ciclo
+    for ( let i = 1; i < chooseDifficult; i++ ) { //Inizializzo ciclo
 
         let elementCurrent = creatingSquare(); //Richiamo la funzione e gli do un nome
         // console.log(elementCurrent);
@@ -29,6 +31,11 @@ function startPlay() {
             this.classList.toggle('active');
             
         })
+
+         elementCurrent.innerText = i;
+
+         console.log( elementCurrent )
+
 
         griglia.append ( elementCurrent ); //Aggiungo al div griglia la funzione con l'evento al click
         
