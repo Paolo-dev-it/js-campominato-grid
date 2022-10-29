@@ -12,25 +12,25 @@ function startPlay() {
 
     function creatingSquare(){ //Creo la funzione per creare un div all'interno del mio div contenitore
 
-        const div = document.createElement("div"); //Creato il tag div
-        div.classList.add("square"); //Aggiunta la classe square al div appena creato
-        return div;
+        const item = document.createElement("div"); //Creato il tag div
+        item.classList.add("square"); //Aggiunta la classe square al div appena creato
+        return item;
     }
         console.log( creatingSquare() );
     
 
-    for ( let i = 0; i < 100; i++ ) {
+    for ( let i = 0; i < 100; i++ ) { //Inizializzo ciclo
 
-        let elementCurrent = creatingSquare();
-        console.log(elementCurrent);
+        let elementCurrent = creatingSquare(); //Richiamo la funzione e gli do un nome
+        // console.log(elementCurrent);
 
-        elementCurrent.addEventListener('click', function(){
+        elementCurrent.addEventListener('click', function(){ //Evento al click che mi permette di aggiungere una classe e grazie al "this" seleziono solo un elemento
             console.log(this);
             this.classList.toggle('active');
             
         })
 
-        griglia.append ( creatingSquare() );
+        griglia.append ( elementCurrent ); //Aggiungo al div griglia la funzione con l'evento al click
         
     }
 
