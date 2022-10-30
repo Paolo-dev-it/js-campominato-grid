@@ -15,13 +15,21 @@ function startPlay() {
     function creatingSquare(){ //Creo la funzione per creare un div all'interno del mio div contenitore
 
         const item = document.createElement("div"); //Creato il tag div
-        item.classList.add("square"); //Aggiunta la classe square al div appena creato
+
+        if (chooseDifficult == 100){
+            item.classList.add("square"); //Aggiunta la classe square al div appena creato
+        } else if (chooseDifficult == 81){
+            item.classList.add("squareNormal");
+        } else {
+            item.classList.add("squareHard");
+        }
+
         return item;
     }
         console.log( creatingSquare() );
     
 
-    for ( let i = 1; i < chooseDifficult; i++ ) { //Inizializzo ciclo
+    for ( let i = 0; i < chooseDifficult; i++ ) { //Inizializzo ciclo
 
         let elementCurrent = creatingSquare(); //Richiamo la funzione e gli do un nome
         // console.log(elementCurrent);
@@ -32,7 +40,7 @@ function startPlay() {
             
         })
 
-         elementCurrent.innerText = i;
+         elementCurrent.innerText = i + 1;
 
          console.log( elementCurrent )
 
