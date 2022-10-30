@@ -19,9 +19,9 @@ function startPlay() {
         if (chooseDifficult == 100){
             item.classList.add("square"); //Aggiunta la classe square al div appena creato
         } else if (chooseDifficult == 81){
-            item.classList.add("squareNormal");
+            item.classList.add("squareNormal"); //Aggiunta la classe squareNormal al div così al cambio della difficoltà i quadrati si sistemano correttamente
         } else {
-            item.classList.add("squareHard");
+            item.classList.add("squareHard"); //Aggiunta la classe squareHard al div così al cambio della difficoltà i quadrati si sistemano correttamente
         }
 
         return item;

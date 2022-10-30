@@ -9,6 +9,7 @@
 body {
   background-color: aquamarine;
   font-family: "Roboto Condensed", sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -16,6 +17,7 @@ header {
   justify-content: space-between;
   padding: 30px;
   background-color: orange;
+  height: 10%;
 }
 
 .container {
@@ -44,12 +46,17 @@ select {
   border-radius: 5px;
 }
 
+main {
+  height: 80%;
+  padding: 50px;
+}
+
 #griglia {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 40%;
   margin: auto;
 }
 
@@ -87,4 +94,5 @@ select {
 footer {
   padding: 30px;
   background-color: orange;
+  height: 10%;
 }
